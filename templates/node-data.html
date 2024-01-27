@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="data-container"></div>
+    <div id="total-container"></div>
+    <script>
+        function fetchData() {
+            $.getJSON('/get-data', function(data) {
+                $('#data-container').empty(); // Önceki toplamları temizle
+                data.cycles.forEach(function(sum) {
+                    $('#data-container').append('<p>' + sum + '</p>');
+                });
+                $('#total-container').html('Genel Toplam: ' + data.total);
+            });
+        }
+
+        setInterval(fetchData, 3000); // Her 1 saniyede bir veri çek
+    </script>
+</body>
+</html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <title>Enoff</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="./static/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link href="./static/css/font-awesome-all.css" rel="stylesheet" />
+    <link href="./static/css/flaticon.css" rel="stylesheet" />
+    <link href="./static/css/owl.css" rel="stylesheet" />
+    <link href="./static/css/bootstrap.css" rel="stylesheet" />
+    <link href="./static/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="./static/css/animate.css" rel="stylesheet" />
+    <link href="./static/css/color.css" rel="stylesheet" />
+    <link href="./static/css/elpath.css" rel="stylesheet" />
+    <link href="./static/css/jquery-ui.css" rel="stylesheet" />
+    <link href="./static/css/style.css" rel="stylesheet" />
+    <link href="./static/css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <!-- page wrapper -->
+  <body>
+    <div class="boxed_wrapper">
+      <!-- preloader -->
+      <div class="loader-wrap">
+        <div class="preloader">
+          <div class="preloader-close">x</div>
+          <div id="handle-preloader" class="handle-preloader">
+            <div class="animation-preloader">
+              <div class="spinner"></div>
+              <div class="txt-loading">
+                <span data-text-preloader="e" class="letters-loading"> e </span>
+                <span data-text-preloader="n" class="letters-loading"> n </span>
+                <span data-text-preloader="o" class="letters-loading"> o </span>
+                <span data-text-preloader="f" class="letters-loading"> f </span>
+                <span data-text-preloader="f" class="letters-loading"> f </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- preloader end -->
+
+      <!--Search Popup-->
+      <div id="search-popup" class="search-popup">
+        <div class="popup-inner">
+          <div class="upper-box clearfix">
+            <figure class="logo-box pull-left">
+              <a href=""
+                ><img src="./static/images/logo.png" alt=""
+              /></a>
+            </figure>
+            <div class="close-search pull-right">
+              <span class="far fa-times"></span>
+            </div>
+          </div>
+          <div class="overlay-layer"></div>
+          <div class="auto-container">
+            <div class="search-form">
+              <form method="post" action="">
+                <div class="form-group">
+                  <fieldset>
+                    <input
+                      type="search"
+                      autocomplete="off"
+                      class="form-control"
+                      name="search-input"
+                      value=""
+                      placeholder="Aranacak kelimeyi yazın."
+                      required
+                    />
+                    <button type="submit"><i class="far fa-search"></i></button>
+                  </fieldset>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main header -->
+      <header class="main-header">
+        <!-- header-top -->
+        <div class="header-top">
+          <div class="top-inner">
+            <div class="left-column">
+              <ul class="info clearfix">
+                <li><i class="icon-1"></i>7/24</li>
+                <li><i class="icon-2"></i>Bilecik / Türkiye</li>
+                <li>
+                  <i class="icon-3"></i
+                  ><a href="mailto:needhelp@info.com">infoenoff@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-column">
+              <ul class="social-links clearfix">
+                <li><p>Takipte Kalın:</p></li>
+                <li>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-pinterest-p"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- header-lower -->
+        <div class="header-lower">
+          <div class="outer-box">
+            <div class="menu-area clearfix">
+              <div class="logo-box">
+                <figure class="logo">
+                  <a href="index-4.html"
+                    ><img src="./static/images/logo.png" alt=""
+                  /></a>
+                </figure>
+              </div>
+              <!--Mobile Navigation Toggler-->
+              <div class="mobile-nav-toggler">
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+              </div>
+              <nav class="main-menu navbar-expand-md navbar-light">
+                <div
+                  class="collapse navbar-collapse show clearfix"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navigation clearfix">
+                    <li class="dropdown">
+                      <a href="index-4.html">Anasayfa</a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="about.html">Hakkımızda</a>
+                    </li>
+                    <li><a href="contact.html">İletişim</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="nav-right">
+              <div class="support-box">
+                <h6>
+                  <i class="icon-4"></i>Tel:
+                  <a href="tel:123045615523">+90 05358402732</a>
+                </h6>
+              </div>
+              <div class="search-box-outer search-toggler">
+                <i class="icon-5"></i>
+              </div>
+              <div class="btn-box">
+                {% if current_user.is_authenticated %}
+                  <a href="{{ url_for('dashboard_profil') }}" class="theme-btn btn-one" style="border-radius: 5px">Profil</a>
+                {% else %}
+                  <a href="{{ url_for('loginSign') }}" class="theme-btn btn-one" style="border-radius: 5px">Giriş Yap / Üye Ol</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--sticky Header-->
+        <div class="sticky-header">
+          <div class="outer-box">
+            <div class="menu-area clearfix">
+              <div class="logo-box">
+                <figure class="logo">
+                  <a href="index-4.html"
+                    ><img src="./static/images/logo.png" alt=""
+                  /></a>
+                </figure>
+              </div>
+              <nav class="main-menu clearfix">
+                <!--Keep This Empty / Menu will come through Javascript-->
+              </nav>
+            </div>
+            <div class="nav-right">
+              <div class="support-box">
+                <h6>
+                  <i class="icon-4"></i>Tell:
+                  <a href="tel:123045615523">+90 05358402732</a>
+                </h6>
+              </div>
+              <div class="search-box-outer search-toggler">
+                <i class="icon-5"></i>
+              </div>
+              <div class="btn-box">
+                {% if current_user.is_authenticated %}
+                  <a href="{{ url_for('dashboard_profil') }}" class="theme-btn btn-one" style="border-radius: 5px">Profil</a>
+                {% else %}
+                  <a href="{{ url_for('loginSign') }}" class="theme-btn btn-one" style="border-radius: 5px">Giriş Yap / Üye Ol</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- main-header end -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+        <nav class="menu-box">
+          <div class="nav-logo">
+            <a href="index-4.html"
+              ><img src="./static/images/logo-2.png" alt="" title=""
+            /></a>
+          </div>
+          <div class="menu-outer">
+            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+          </div>
+          <div class="contact-info">
+            <h4>İletişim Bilgisi</h4>
+            <ul>
+              <li>Bilecik / Türkiye</li>
+              <li><a href="tel:+8801682648101">+90 05358402732</a></li>
+              <li>
+                <a href="mailto:info@example.com">infoenoff@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="social-links">
+            <ul class="clearfix">
+              <li>
+                <a href="index-4.html"><span class="fab fa-twitter"></span></a>
+              </li>
+              <li>
+                <a href="index-4.html"
+                  ><span class="fab fa-facebook-square"></span
+                ></a>
+              </li>
+              <li>
+                <a href="index-4.html"
+                  ><span class="fab fa-pinterest-p"></span
+                ></a>
+              </li>
+              <li>
+                <a href="index-4.html"><span class="fab fa-instagram"></span></a>
+              </li>
+              <li>
+                <a href="index-4.html"><span class="fab fa-youtube"></span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Page Title -->
+      <section class="page-title centred">
+        <div
+          class="bg-layer parallax-bg"
+          data-parallax='{"y": 100}'
+          style="
+            background-image: url(./static/images/background/page-title4.png);
+          "
+        ></div>
+        <div class="auto-container">
+          <div class="content-box">
+            <h2>Giriş Yap / Üye Ol</h2>
+          </div>
+        </div>
+      </section>
+      <!-- End Page Title -->
+
+      <div class="butonContainer">
+        <button class="login-btn" onclick="toggleLogin()">Giriş Yap</button>
+        <button class="signin-btn" onclick="toggleSignin()">Üye Ol</button>
+      </div>
+
+      <section>
+        <div class="form-holder" id="login">
+          <div class="login-container">
+            <div class="form-content">
+              <div class="form-items">
+                <!-- <form method="POST" action="/loginSign.html"> -->
+                  <form method="POST" action="{{ url_for('loginSign') }}">
+                  <div class="row">
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control"
+                        placeholder="Mail"
+                        name="mail"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <input
+                        type="password"
+                        autocomplete="off"
+                        class="form-control"
+                        placeholder="Şifre"
+                        name="sifre"
+                      />
+                    </div>
+                  </div>
+                  <div class="row top-padding">
+                    <div
+                      class="col-12"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                      "
+                    >
+                      <button type="submit" class="ibtn" style="width: 40%">
+                        Giriş Yap
+                      </button>
+
+                    </div>
+                  </div>
+                </form>
+
+                <!-- Hata mesajını göstermek için bir bölüm -->
+                {% if error %}
+                <p style="color: red; text-align: center">{{ error }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="kapat" id="signin">
+          <div class="uyetip" id="uyetip">
+            <section class="feature-style-four p_relative centred">
+              <div class="auto-container">
+                <div class="inner-container">
+                  <div class="row clearfix">
+                    <div
+                      class="col-lg-4 col-md-6 col-sm-12 feature-block cursorPointer"
+                      onclick="toggleIsletme()"
+                    >
+                      <div
+                        class="feature-block-four"
+                        data-wow-duration="1500ms"
+                      >
+                        <div class="inner-box" style="border-radius: 5px">
+                          <div class="icon-box">
+                            <div
+                              class="icon-shape"
+                              style="
+                                background-image: url(./static/images/shape/shape-30.png);
+                              "
+                            ></div>
+                            <div class="icon"><i class="icon-12"></i></div>
+                          </div>
+                          <h3><div>İşletme</div></h3>
+                          <p>
+                            İşletmelerin enerji yönetimiyle maliyetleri
+                            düşürüyor ve sürdürülebilir bir işletme modeli
+                            sunuyor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-lg-4 col-md-6 col-sm-12 feature-block cursorPointer"
+                      onclick="toggleOkul()"
+                    >
+                      <div
+                        class="feature-block-four"
+                        data-wow-duration="1500ms"
+                      >
+                        <div class="inner-box" style="border-radius: 5px">
+                          <div class="icon-box">
+                            <div
+                              class="icon-shape"
+                              style="
+                                background-image: url(./static/images/shape/shape-30.png);
+                              "
+                            ></div>
+                            <div class="icon"><i class="icon-13"></i></div>
+                          </div>
+                          <h3><div>Okul</div></h3>
+                          <p>
+                            Okullarda enerji tüketimini izleyip kontrol etmek,
+                            eğitim ortamlarını daha verimli ve çevre dostu hale
+                            getiriyor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-lg-4 col-md-6 col-sm-12 feature-block cursorPointer"
+                      onclick="toggleEv()"
+                    >
+                      <div
+                        class="feature-block-four"
+                        data-wow-duration="1500ms"
+                      >
+                        <div class="inner-box" style="border-radius: 5px">
+                          <div class="icon-box">
+                            <div
+                              class="icon-shape"
+                              style="
+                                background-image: url(./static/images/shape/shape-30.png);
+                              "
+                            ></div>
+                            <div class="icon"><i class="icon-14"></i></div>
+                          </div>
+                          <h3><div>Ev</div></h3>
+                          <p>
+                            Evlerde enerjiyi akıllıca yöneterek konforunuzu
+                            artırırken aynı zamanda tasarruf sağlamanıza
+                            yardımcı oluyor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- form-content -->
+          <div class="kapat" id="isletme">
+            <div class="form-items">
+              <div class="geri">
+                <span>İŞLETME</span>
+                <div class="resimgeri" onclick="geriisletme()"></div>
+              </div>
+              <form method="POST" action="{{ url_for('submit_user') }}">
+                <div class="row">
+                  <div class="col-12 col-sm-6" for="ad">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="İsim"
+                      name="ad"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6" for="soyad">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Soyisim"
+                      name="soyad"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6" for="mail">
+                    <input
+                      type="email"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="E-mail"
+                      name="mail"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Telefon"
+                      name="telefon"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Şifre"
+                      name="sifre"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Şifre Tekrar"
+                      name="sifre_tekrar"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      placeholder="Adres"
+                      style="resize: none; height: 100px"
+                      name="adres"
+                    ></textarea>
+                  </div>
+                </div>
+                <input type="hidden" autocomplete="off" name="kt" value="1">
+                <input type="hidden" autocomplete="off" name="rol" value="admin">
+                <div class="onayContainer">
+                  <div class="onaykutusu">
+                    <input
+                      type="checkbox"
+                      autocomplete="off"
+                      id="chk1"
+                      required
+                      class="inputCheckbox"
+                      name="isletme"
+                    /><label for="chk1"
+                      >Enoff <a href="#">hüküm ve koşullarını </a>kabul ediyorum
+                    </label>
+                  </div>
+                  <div style="width: 40px">
+                    <div class="form-button text-right">
+                      <button
+                        id="submit"
+                        type="submit"
+                        class="ibtn less-padding butonKaydol"
+                        onclick="submitForm('İsletmeForm')"
+                      >
+                        Kaydol
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="kapat" id="okul">
+            <div class="form-items">
+              <div class="geri">
+                <span>OKUL</span>
+                <div class="resimgeri" onclick="geriokul()"></div>
+              </div>
+              <form method="POST" action="{{ url_for('submit_user') }}">
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="İsim"
+                      name="ad"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Soyisim"
+                      name="soyad"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="E-mail"
+                      name="mail"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Telefon"
+                      name="telefon"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Şifre"
+                      name="sifre"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Şifre Tekrar"
+                      name="sifre_tekrar"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      placeholder="Adres"
+                      style="resize: none; height: 100px"
+                      name="adres"
+                    ></textarea>
+                  </div>
+                </div>
+                <input type="hidden" autocomplete="off" name="kt" value="2">
+                <input type="hidden" autocomplete="off" name="rol" value="admin">
+                <div class="onayContainer">
+                  <div class="onaykutusu">
+                    <input
+                      type="checkbox"
+                      autocomplete="off"
+                      id="chk1"
+                      required
+                      class="inputCheckbox"
+                      name="okul"
+                    /><label for="chk1"
+                      >Enoff <a href="#">hüküm ve koşullarını </a>kabul ediyorum
+                    </label>
+                  </div>
+                  <div style="width: 40px">
+                    <div class="form-button text-right">
+                      <button
+                        id="submit"
+                        type="submit"
+                        class="ibtn less-padding butonKaydol"
+                        onclick="submitForm('OkulForm')"
+                      >
+                        Kaydol
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="kapat" id="ev">
+            <div class="form-items">
+              <div class="geri">
+                <span>EV</span>
+                <div class="resimgeri" onclick="geriev()"></div>
+              </div>
+              <form method="POST" action="{{ url_for('submit_user') }}">
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="İsim"
+                      name="ad"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Soyisim"
+                      name="soyad"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="E-mail"
+                      name="mail"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Telefon"
+                      name="telefon"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Şifre"
+                      name="sifre"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="form-control"
+                      placeholder="Şifre Tekrar"
+                      name="sifre_tekrar"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      placeholder="Adres"
+                      style="resize: none; height: 100px"
+                      name="adres"
+                    ></textarea>
+                  </div>
+                </div>
+                <input type="hidden" autocomplete="off" name="kt" value="3">
+                <input type="hidden" autocomplete="off" name="rol" value="admin">
+                <div class="onayContainer">
+                  <div class="onaykutusu">
+                    <input
+                      type="checkbox"
+                      autocomplete="off"
+                      id="chk1"
+                      required
+                      class="inputCheckbox"
+                      name="ev"
+                    /><label for="chk1"
+                      >Enoff <a href="index-4.html">hüküm ve koşullarını </a>kabul ediyorum
+                    </label>
+                  </div>
+                  <div style="width: 40px">
+                    <div class="form-button text-right">
+                      <button
+                        id="submit"
+                        type="submit"
+                        class="ibtn less-padding butonKaydol"
+                        onclick="submitForm('EvForm')"
+                      >
+                        Kaydol
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- main-footer -->
+      <footer class="cta-style-two p_relative">
+        <div class="pattern-layer">
+          <div
+            class="pattern-2"
+            style="background-image: url(./static/images/shape/shape-37.png)"
+          ></div>
+        </div>
+        <div class="auto-container">
+          <div class="row align-items-flex-start clearfix">
+            <div class="col-lg-4 col-md-8 col-sm-8 content-column ml_30">
+              <div class="content-box p_relative ml_70 mr_70">
+                <div class="sec-title light p_relative mb_13">
+                  <h5
+                    class="d_block fs_17 lh_25 fw_medium mb_13"
+                    style="cursor: default"
+                  >
+                    ENOFF
+                  </h5>
+                  <hr class="treler" />
+                </div>
+                <div class="socialicons2">
+                  <a href="about.html" style="margin-bottom: 10px"
+                    ><span>Hakkımızda</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-8 col-sm-8 content-column"
+              style="margin-left: -15px"
+            >
+              <div class="content-box p_relative ml_70 mr_70">
+                <div class="sec-title light p_relative mb_13">
+                  <h5
+                    class="d_block fs_17 lh_25 fw_medium mb_13"
+                    style="cursor: default"
+                  >
+                    BİLGİLENDİRME
+                  </h5>
+                  <hr class="treler" />
+                </div>
+                <div class="socialicons2">
+                  <a href="index-4.html#hedef-bolum" style="margin-bottom: 10px"
+                    ><span>Sıkça Sorulan Sorular</span></a
+                  >
+                  <a href="about.html" style="margin-bottom: 10px"
+                    ><span>Enoff Sözleşmesi</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-8 col-sm-8 content-column"
+              style="margin-left: -15px"
+            >
+              <div class="content-box p_relative ml_70 mr_70">
+                <div class="sec-title light p_relative mb_13">
+                  <h5
+                    class="d_block fs_17 lh_25 fw_medium mb_13"
+                    style="cursor: default"
+                  >
+                    İletişim
+                  </h5>
+                  <hr class="treler" />
+                  <span class="takipFooter">Takipte Kalın</span>
+                </div>
+                <div class="socialicons">
+                  <div class="icon-box-footer">
+                    <i class="fab fa-twitter" style="font-size: large"></i>
+                  </div>
+                  <div class="icon-box-footer">
+                    <i class="fab fa-facebook-f" style="font-size: large"></i>
+                  </div>
+                  <div class="icon-box-footer">
+                    <i class="fab fa-instagram" style="font-size: large"></i>
+                  </div>
+                  <div class="icon-box-footer">
+                    <i class="fab fa-whatsapp" style="font-size: large"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- main-footer end -->
+
+      <!--Scroll to top-->
+      <div class="scroll-to-top">
+        <div>
+          <div class="scroll-top-inner">
+            <div class="scroll-bar">
+              <div class="bar-inner"></div>
+            </div>
+            <div class="scroll-bar-text">Başa Git</div>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll to top end -->
+    </div>
+
+    <!-- jequery plugins -->
+    <script src="./static/js/jquery.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/plugins.js"></script>
+    <script src="./static/js/owl.js"></script>
+    <script src="./static/js/wow.js"></script>
+    <script src="./static/js/validation.js"></script>
+    <script src="./static/js/jquery.fancybox.js"></script>
+    <script src="./static/js/appear.js"></script>
+    <script src="./static/js/scrollbar.js"></script>
+    <script src="./static/js/isotope.js"></script>
+    <script src="./static/js/jquery.nice-select.min.js"></script>
+    <script src="./static/js/jquery-ui.js"></script>
+    <script src="./static/js/parallax-scroll.js"></script>
+
+    <!-- main-js -->
+    <script src="./static/js/script.js"></script>
+  </body>
+  <!-- End of .page_wrapper -->
+</html>

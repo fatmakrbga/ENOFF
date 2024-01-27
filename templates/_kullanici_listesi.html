@@ -1,0 +1,10 @@
+<!-- Bu dosya _kullanici_listesi.html olarak kaydedilmelidir -->
+{% for user in users %}
+<div class="scrollItemUrun2">
+  <button class="scrollItemUrun24" onclick="silKullanici('{{ user.id }}')">
+      <img src="../static/images/icons/delete.png" class="iconselectt" alt="Sil"/>
+  </button>
+  <div style="margin-left: 14px;">{{ user.ad }}</div>
+  <div style="margin-right: 14px;">{{ user.soyad }}</div>
+</div>
+{% endfor %}

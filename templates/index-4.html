@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>Enoff</title>
+
+<!-- Fav Icon -->
+<link rel="icon" href="./static/images/favicon.ico" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="./static/css/font-awesome-all.css" rel="stylesheet">
+<link href="./static/css/flaticon.css" rel="stylesheet">
+<link href="./static/css/owl.css" rel="stylesheet">
+<link href="./static/css/bootstrap.css" rel="stylesheet">
+<link href="./static/css/jquery.fancybox.min.css" rel="stylesheet">
+<link href="./static/css/animate.css" rel="stylesheet">
+<link href="./static/css/color.css" rel="stylesheet">
+<link href="./static/css/elpath.css" rel="stylesheet">
+<link href="./static/css/jquery-ui.css" rel="stylesheet">
+<link href="./static/css/nice-select.css" rel="stylesheet">
+<link href="./static/css/style.css" rel="stylesheet">
+<link href="./static/css/responsive.css" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+
+        <!-- preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">x</div>
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <div class="spinner"></div>
+                        <div class="txt-loading">
+                            <span data-text-preloader="e" class="letters-loading">
+                                e
+                            </span>
+                            <span data-text-preloader="n" class="letters-loading">
+                                n
+                            </span>
+                            <span data-text-preloader="o" class="letters-loading">
+                                o
+                            </span>
+                            <span data-text-preloader="f" class="letters-loading">
+                                f
+                            </span>
+                            <span data-text-preloader="f" class="letters-loading">
+                                f
+                            </span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+
+        <!--Search Popup-->
+        <div id="search-popup" class="search-popup">
+            <div class="popup-inner">
+                <div class="upper-box clearfix">
+                    <figure class="logo-box pull-left"><a href="index-4.html"><img src="./static/images/logo.png" alt=""></a></figure>
+                    <div class="close-search pull-right"><span class="far fa-times"></span></div>
+                </div>
+                <div class="overlay-layer"></div>
+                <div class="auto-container">
+                    <div class="search-form">
+                        <form method="post" action="index-4.html">
+                            <div class="form-group">
+                                <fieldset>
+                                    <input type="search" class="form-control" name="search-input" value="" placeholder="Type your keyword and hit" required >
+                                    <button type="submit"><i class="far fa-search"></i></button>
+                                </fieldset>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- main header -->
+        <header class="main-header">
+            <!-- header-top -->
+            <div class="header-top">
+                <div class="top-inner">
+                    <div class="left-column">
+                        <ul class="info clearfix">
+                            <li><i class="icon-1"></i>7/24</li>
+                            <li><i class="icon-2"></i>Bilecik / Türkiye</li>
+                            <li><i class="icon-3"></i><a href="mailto:needhelp@info.com">infoenoff@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-column">
+                        <ul class="social-links clearfix">
+                            <li><p>Takipte Kalın:</p></li>
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header-lower -->
+            <div class="header-lower">
+                <div class="outer-box">
+                    <div class="menu-area clearfix">
+                        <div class="logo-box">
+                            <figure class="logo"><a href="index-4.html"><img src="./static/images/logo.png" alt=""></a></figure>
+                        </div>
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler">
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                        </div>
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown"><a href="index-4.html">Anasayfa</a></li>
+                                    <li><a href="about.html">Hakkımızda</a></li>
+                                    <li><a href="contact.html">İletişim</a></li> 
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="nav-right">
+                        <div class="support-box">
+                            <h6><i class="icon-4"></i>Tel: <a href="tel:123045615523">+90 05358402732</a></h6>
+                        </div>
+                        <div class="search-box-outer search-toggler">
+                            <i class="icon-5"></i>
+                        </div>
+                        <div class="btn-box">
+                            {% if current_user.is_authenticated %}
+                              <a href="{{ url_for('dashboard_profil') }}" class="theme-btn btn-one" style="border-radius: 5px">Profil</a>
+                            {% else %}
+                              <a href="{{ url_for('loginSign') }}" class="theme-btn btn-one" style="border-radius: 5px">Giriş Yap / Üye Ol</a>
+                            {% endif %}
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--sticky Header-->
+            <div class="sticky-header">
+                <div class="outer-box">
+                    <div class="menu-area clearfix">
+                        <div class="logo-box">
+                            <figure class="logo"><a href="index-4.html"><img src="./static/images/logo.png" alt=""></a></figure>
+                        </div>
+                        <nav class="main-menu clearfix">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+                    </div>
+                    <div class="nav-right">
+                        <div class="support-box">
+                            <h6><i class="icon-4"></i>Tell: <a href="tel:123045615523">+90 05358402732</a></h6>
+                        </div>
+                        <div class="search-box-outer search-toggler">
+                            <i class="icon-5"></i>
+                        </div>
+                        <div class="btn-box">
+                            {% if current_user.is_authenticated %}
+                              <a href="{{ url_for('dashboard_profil') }}" class="theme-btn btn-one" style="border-radius: 5px">Profil</a>
+                            {% else %}
+                              <a href="{{ url_for('loginSign') }}" class="theme-btn btn-one" style="border-radius: 5px">Giriş Yap / Üye Ol</a>
+                            {% endif %}
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main-header end -->
+
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><i class="fas fa-times"></i></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index-4.html"><img src="./static/images/logo-2.png" alt="" title=""></a></div>
+                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+                <div class="contact-info">
+                    <h4>İletişim Bilgisi</h4>
+                    <ul>
+                        <li>Bilecik / Türkiye</li>
+                        <li><a href="tel:+8801682648101">+90 05358402732</a></li>
+                        <li><a href="mailto:info@example.com">infoenoff@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href=""><span class="fab fa-twitter"></span></a></li>
+                        <li><a href=""><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href=""><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href=""><span class="fab fa-instagram"></span></a></li>
+                        <li><a href=""><span class="fab fa-youtube"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!-- End Mobile Menu -->
+
+
+        <!-- banner-section -->
+        <section class="banner-style-four p_relative centred">
+            <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
+                <div class="slide-item p_relative">
+                    <div class="image-layer p_absolute" style="background-image:url(./static/images/banner/banner-9.png)"></div>
+                    <div class="auto-container">
+                        <div class="content-box p_relative d_block z_5">
+                            <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_18">Akıllı <span>Enerji</span> Yönetimi ve Kontrolün Yeni Boyutu</h2>
+                            <p class="p_relative d_block fs_18">ENOFF ile enerjinin gücünü kontrol edin, geleceğe daha sürdürülebilir bir adım atın!</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="slide-item p_relative">
+                    <div class="image-layer p_absolute" style="background-image:url(./static/images/banner/banner-10.png)"></div>
+                    <div class="auto-container">
+                        <div class="content-box p_relative d_block z_5">
+                            <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_18">Enerjinizin kahramanı sizsiniz, <span>kontrol</span> sizin elinizde! </h2>
+                            <p class="p_relative d_block fs_18">İşletmelerden evlere, her yerde enerji kullanımınızı zahmetsizce yönetin.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="slide-item p_relative">
+                    <div class="image-layer p_absolute" style="background-image:url(./static/images/banner/banner-11.png)"></div>
+                    <div class="auto-container">
+                        <div class="content-box p_relative d_block z_5">
+                            <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_18">ENOFF ile <span>optimum</span> performansın keyfini çıkarın!</h2>
+                            <p class="p_relative d_block fs_18">ENOFF'un akıllı prizleri sayesinde elektrik tüketiminizi anlık olarak izleyin ve istediğiniz yerden kontrol ederek enerji tasarrufunu optimize edin.</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner-section end -->
+
+
+        <!-- feature-style-four -->
+        <section class="feature-style-four p_relative centred">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-four wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="inner-box" style="border-radius: 5px;">
+                                    <div class="icon-box">
+                                        <div class="icon-shape" style="background-image: url(./static/images/shape/shape-30.png);"></div>
+                                        <div class="icon"><i class="icon-12"></i></div>
+                                    </div>
+                                    <h3><a href="loginSign.html">İşletme</a></h3>
+                                    <p>İşletmelerin enerji yönetimiyle maliyetleri düşürüyor ve sürdürülebilir bir işletme modeli sunuyor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-four wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="inner-box" style="border-radius: 5px;">
+                                    <div class="icon-box">
+                                        <div class="icon-shape" style="background-image: url(./static/images/shape/shape-30.png);"></div>
+                                        <div class="icon"><i class="icon-13"></i></div>
+                                    </div>
+                                    <h3><a href="loginSign.html">Okul</a></h3>
+                                    <p>Okullarda enerji tüketimini izleyip kontrol etmek, eğitim ortamlarını daha verimli ve çevre dostu hale getiriyor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-four wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="inner-box" style="border-radius: 5px;">
+                                    <div class="icon-box">
+                                        <div class="icon-shape" style="background-image: url(./static/images/shape/shape-30.png);"></div>
+                                        <div class="icon"><i class="icon-14"></i></div>
+                                    </div>
+                                    <h3><a href="loginSign.html">Ev</a></h3>
+                                    <p>Evlerde enerjiyi akıllıca yöneterek konforunuzu artırırken aynı zamanda tasarruf sağlamanıza yardımcı oluyor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature-style-four end -->
+
+
+        <!-- about-style-four -->
+        <section class="about-style-four p_relative sec-pad">
+            <div class="auto-container">
+                <div class="sec-title p_relative mb_45">
+                    <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Biz Kimiz?</h5>
+                    <h2 class="d_block fs_40 lh_50 fw_bold">Profesyonel Enerji Optimizasyon <br />Hizmeti Sunuyoruz</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-column">
+                        <div class="inner-box">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-12 left-column">
+                                    <div class="left-content p_relative d_block mr_30">
+                                        <p>ENOFF, enerji tüketimini takip eden ve kullanıcılara uzaktan kontrol imkanı sunan bir enerji yönetim sistemidir.<br/>
+                                        Sistem, işletmelerden okullara ve evlere kadar geniş bir kullanıcı kitlesine hitap etmektedir.<br/><br/>
+                                        ENOFF'un temel özellikleri arasında günlük ve aylık elektrik tüketiminin izlenmesi, prizlere entegre edilebilen özel donanım ile gerçekleştirilen veri toplama, bu verilerin web sayfasında kullanıcı dostu bir arayüzle sunulması ve kullanıcılara uzaktan enerji kontrolü sağlanması bulunmaktadır. </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 right-column">
+                                    <div class="right-content">
+                                        <p>ENOFF'un amaçları arasında sürdürülebilir enerji kullanımını teşvik etmek ve enerji yönetimini daha etkili hale getirmek bulunmaktadır.
+                                        Bu özellikler, enerji tüketimini anlamak, takip etmek ve yönetmek isteyen kullanıcılara çeşitli avantajlar sunar.</p>
+                                        <ul class="list-style-one clearfix">
+                                            <li>Enerji Verimliliği Arttırma</li>
+                                            <li>Uzaktan Kontrol İmkanı</li>
+                                            <li>Etkin Maliyet Yöntemi</li>
+                                            <li>Sürdürülebilirlik Katkısı</li>
+                                            <li>Tasarruf Sağlama Yeteneği</li>
+                                            <li>Özelleştirilebilir Çözüm</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 image-column">
+                        <div data-animation-box class="image-box mt_7">
+                            <div class="shape" style="background-image: url(./static/images/shape/shape-25.png);"></div>
+                            <figure data-animation-text class="image overlay-anim-black-bg mb_20" data-animation="overlay-animation"><img src="./static/images/resource/about-4.png" alt="" style="border-radius: 10px;"></figure>
+                            <a href="about.html" class="theme-btn btn-one align-items-center col-12" style="border-radius: 5px;">Daha Fazla Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-style-four -->
+
+        <!-- working-style-two -->
+        <section class="working-style-two p_relative sec-pad">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 title-column">
+                         <div class="sec-title p_relative">
+                            <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Donanım Birimi Entegrasyonu</h5>
+                            <h2 class="d_block fs_40 lh_50 fw_bold">Donanım Birimini Nasıl kullanacağız?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-box">
+                    <div class="tab-btn-box centred">
+                        <ul class="tab-btns tab-buttons clearfix">
+                            <li class="tab-btn" data-tab="#tab-1"><i class="icon-49"></i></li>
+                            <li class="tab-btn active-btn" data-tab="#tab-2"><i class="icon-50"></i></li>
+                            <li class="tab-btn" data-tab="#tab-3"><i class="icon-51"></i></li>
+                        </ul>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab" id="tab-1">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                    <div class="text mr_30">
+                                        <p>Adipisicing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim minim veniam quis nostrud exercition ulamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                                        <p>Cillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cup idatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <a href="loginSign.html" class="theme-btn btn-one">Devamını Oku</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                    <div class="image-box ml_120">
+                                        <div class="shape" style="background-image: url(./static/images/shape/shape-33.png);"></div>
+                                        <figure class="image"><img src="./static/images/resource/working-5.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab active-tab" id="tab-2">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                    <div class="text mr_30">
+                                        <p>Adipisicing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim minim veniam quis nostrud exercition ulamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                                        <p>Cillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cup idatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <a href="about.html" class="theme-btn btn-one">Daha Fazla Bilgi</a>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                    <div class="image-box ml_120">
+                                        <div class="shape" style="background-image: url(./static/images/shape/shape-33.png);"></div>
+                                        <figure class="image"><img src="./static/images/resource/working-4.png" alt="" style="border-radius: 5px;"></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab" id="tab-3">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                    <div class="text mr_30">
+                                        <p>Adipisicing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim minim veniam quis nostrud exercition ulamco laboris nis aliquip commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                                        <p>Cillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cup idatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <a href="about.html" class="theme-btn btn-one">Daha Fazla Bilgi</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                    <div class="image-box ml_120">
+                                        <div class="shape" style="background-image: url(./static/images/shape/shape-33.png);"></div>
+                                        <figure class="image"><img src="./static/images/resource/working-6.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- working-style-two end -->
+
+        <!-- news-section -->
+        <section class="news-section alternat-2 p_relative sec-pad">
+            <div class="auto-container">
+                <div class="sec-title p_relative mb_50 centred">
+                    <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Ürünler</h5>
+                    <h2 class="d_block fs_40 lh_50 fw_bold">Seri Farklılıkları</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box p_relative d_block">
+                                <figure class="image-box">
+                                    <a href=""><img src="./static/images/news/sigorta1.png" alt=""></a>
+                                    <div class="category"><a href="">Kurulum</a></div>
+                                </figure>
+                                <div class="lower-content p_relative d_block">
+                                    <h3><a href="">Takip Sistemi + Ev Kullanımı</a></h3>
+                                    <ul class="post-info clearfix">
+                                        <li><i class="icon-42"></i>10 Kasım, 2023</li>
+                                        <li><i class="icon-43"></i><a href="">Fatmanur KIRBOĞA</a></li>
+                                    </ul>
+                                    <p>Hem enoff sistemi hem de sigorta olarak kullanılmaya devam eden akıllı sigortalar...</p>
+                                    <div class="link"><a href="">Devamını Oku<i class="icon-7"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="inner-box p_relative d_block">
+                                <figure class="image-box">
+                                    <a href=""><img src="./static/images/news/sigorta2.png" alt=""></a>
+                                    <div class="category"><a href="">Kurulum</a></div>
+                                </figure>
+                                <div class="lower-content p_relative d_block">
+                                    <h3><a href="">Takip Sistemi + Çoklu Kullanıcı</a></h3>
+                                    <ul class="post-info clearfix">
+                                        <li><i class="icon-42"></i>09 Kasım, 2023</li>
+                                        <li><i class="icon-43"></i><a href="">Fatmanur KIRBOĞA</a></li>
+                                    </ul>
+                                    <p>Enoff adına tasarlanmış donanım birimlerinin birbirleri ile sürümlerinden...</p>
+                                    <div class="link"><a href="">Devamını Oku<i class="icon-7"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="inner-box p_relative d_block">
+                                <figure class="image-box">
+                                    <a href=""><img src="./static/images/news/sigorta3.png" alt=""></a>
+                                    <div class="category"><a href="">Kurulum</a></div>
+                                </figure>
+                                <div class="lower-content p_relative d_block">
+                                    <h3><a href="">Gömülü Takip Sistemi + Çoklu Kullanıcı</a></h3>
+                                    <ul class="post-info clearfix">
+                                        <li><i class="icon-42"></i>08 Kasım, 2023</li>
+                                        <li><i class="icon-43"></i><a href="">Fatmanur KIRBOĞA</a></li>
+                                    </ul>
+                                    <p>Enoff tarafından sigortalara beklenmeyen yükseklik sorunlarına karşılık gömülü sistem...</p>
+                                    <div class="link"><a href="">Devamını Oku<i class="icon-7"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- news-section end -->
+
+        <!-- faq-style-two -->
+        <section class="faq-style-two sec-pad bg-color-3" id="hedef-bolum">
+            <div class="pattern-layer" style="background-image: url(./static/images/shape/shape-36.png);"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_five">
+                            <div class="content-box p_relative d_block mr_30">
+                                <div class="sec-title p_relative mb_30" >
+                                    <h5 class="d_block fs_17 lh_25 fw_medium mb_9">SSS</h5>
+                                    <h2 class="d_block fs_40 lh_50 fw_bold mb_25">Sıkça Sorulan Sorular</h2>
+                                    <p class="fs_16">Tüm servislerimiz için teknisyenler %100 memnuniyetle size cevap vermek için hazırda bekliyorlar.</p>
+                                </div>
+                                <ul class="accordion-box">
+                                    <li class="accordion block active-block">
+                                        <div class="acc-btn active" style="border-radius: 5px;">
+                                            <div class="icon-outer"><i class="far fa-angle-down"></i></div>
+                                            <h5>Donanımsal yardım alabilir miyiz?</h5>
+                                        </div>
+                                        <div class="acc-content current">
+                                            <div class="text">
+                                                <p>Acil çağrı servislerimiz aracılığıyla destek talebi oluşturabilirsiniz.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="accordion block">
+                                        <div class="acc-btn" style="border-radius: 5px;">
+                                            <div class="icon-outer"><i class="far fa-angle-down"></i></div>
+                                            <h5>Oluşturduğum tabloda enerji ölçümü doğru mu nasıl anlarım?</h5>
+                                        </div>
+                                        <div class="acc-content">
+                                            <div class="text">
+                                                <p>Profesyonel bir sisteme sahip olan Enoff, sigortalara takılan donanımsal yapı sayesinde internet ortamına doğru verileri aktarmaktadır.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="accordion block">
+                                        <div class="acc-btn" style="border-radius: 5px;">
+                                            <div class="icon-outer"><i class="far fa-angle-down"></i></div>
+                                            <h5>İnternet olmadığı zaman nasıl bir takip gerçekleşecek?</h5>
+                                        </div>
+                                        <div class="acc-content">
+                                            <div class="text">
+                                                <p>İnternet olmadığı zaman diye bir durum söz konusu olmayacak aktarım gerçekleşecektir, sizin bunları görmek için tabiki internete ihtiyacınız var.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_14">
+                            <div class="content-box p_relative d_block ml_30" >
+                                <figure class="image-box"><img src="./static/images/resource/faq-4.png" alt="" style="border-radius: 5px;"></figure>
+                                <div class="support-center p_absolute l_0 t_110 z_1" style="border-radius: 5px;">
+                                    <div class="icon-box"><i class="icon-37"></i></div>
+                                    <h3><a href="tel:+0124357689">+90 05358402732</a></h3>
+                                    <p>Acil Çağrı Servisi</p>
+                                </div>
+                                <div class="experience-box p_absolute l_0 b_0 z_1" style="border-radius: 5px;">
+                                    <div class="light-icon"><i class="icon-45"></i></div>
+                                    <h2>10</h2>
+                                    <h5>Bu alanda <br />yılların <br />tecrübesi</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- faq-style-two end -->
+
+
+      <!-- main-footer -->
+      <footer class="cta-style-two p_relative">
+        <div class="pattern-layer">
+          <div
+            class="pattern-2"
+            style="background-image: url(./static/images/shape/shape-37.png)"
+          ></div>
+        </div>
+        <div class="auto-container">
+          <div class="row align-items-flex-start clearfix">
+            <div class="col-lg-4 col-md-8 col-sm-8 content-column ml_30">
+              <div class="content-box p_relative ml_70 mr_70">
+                <div class="sec-title light p_relative mb_13">
+                  <h5
+                    class="d_block fs_17 lh_25 fw_medium mb_13"
+                    style="cursor: default"
+                  >
+                    ENOFF
+                  </h5>
+                  <hr class="treler" />
+                </div>
+                <div class="socialicons2">
+                  <a href="about.html" style="margin-bottom: 10px"
+                    ><span>Hakkımızda</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-8 col-sm-8 content-column"
+              style="margin-left: -15px"
+            >
+              <div class="content-box p_relative ml_70 mr_70">
+                <div class="sec-title light p_relative mb_13">
+                  <h5
+                    class="d_block fs_17 lh_25 fw_medium mb_13"
+                    style="cursor: default"
+                  >
+                    BİLGİLENDİRME
+                  </h5>
+                  <hr class="treler" />
+                </div>
+                <div class="socialicons2">
+                  <a href="index-4.html#hedef-bolum" style="margin-bottom: 10px"
+                    ><span>Sıkça Sorulan Sorular</span></a
+                  >
+                  <a href="about.html" style="margin-bottom: 10px"
+                    ><span>Enoff Sözleşmesi</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-8 col-sm-8 content-column"
+              style="margin-left: -15px"
+            >
+              <div class="content-box p_relative ml_70 mr_70">
+                <div class="sec-title light p_relative mb_13">
+                  <h5
+                    class="d_block fs_17 lh_25 fw_medium mb_13"
+                    style="cursor: default"
+                  >
+                    İletişim
+                  </h5>
+                  <hr class="treler" />
+                  <span class="takipFooter">Takipte Kalın</span>
+                </div>
+                <div class="socialicons">
+                  <div class="icon-box-footer">
+                    <i class="fab fa-twitter" style="font-size: large"></i>
+                  </div>
+                  <div class="icon-box-footer">
+                    <i class="fab fa-facebook-f" style="font-size: large"></i>
+                  </div>
+                  <div class="icon-box-footer">
+                    <i class="fab fa-instagram" style="font-size: large"></i>
+                  </div>
+                  <div class="icon-box-footer">
+                    <i class="fab fa-whatsapp" style="font-size: large"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- main-footer end -->
+
+
+        <!--Scroll to top-->
+        <div class="scroll-to-top">
+            <div>
+                <div class="scroll-top-inner">
+                    <div class="scroll-bar">
+                        <div class="bar-inner"></div>
+                    </div>
+                    <div class="scroll-bar-text">Başa Git</div>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll to top end -->
+        
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="./static/js/jquery.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/plugins.js"></script>
+    <script src="./static/js/owl.js"></script>
+    <script src="./static/js/wow.js"></script>
+    <script src="./static/js/validation.js"></script>
+    <script src="./static/js/jquery.fancybox.js"></script>
+    <script src="./static/js/appear.js"></script>
+    <script src="./static/js/scrollbar.js"></script>
+    <script src="./static/js/isotope.js"></script>
+    <script src="./static/js/jquery.nice-select.min.js"></script>
+    <script src="./static/js/jquery-ui.js"></script>
+    <script src="./static/js/parallax-scroll.js"></script>
+    <script src="./static/js/jquery.countTo.js"></script>
+
+    <!-- main-js -->
+    <script src="./static/js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
+</html>
