@@ -9,7 +9,7 @@ import random
 import string
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:3777@localhost/ENOFFDb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:****@localhost/*******'
 app.config['SECRET_KEY'] = 'your_secret_key'
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
@@ -692,53 +692,9 @@ def get_users(house_id):
     kullanici_list = kullanici.query.filter(kullanici.id.in_(kullanici_ids)).all()  # Kullanici modelinin adı düzeltilmeli
     return jsonify([{'id': k.id, 'ad': k.ad} for k in kullanici_list])
 
-@app.route('/air-conditioning.html')
-def air_conditioning():
-    return render_template('air-conditioning.html')
-
-@app.route('/heating-service.html')
-def heating_service():
-    return render_template('heating-service.html')
-
-@app.route('/power-outlets.html')
-def power_outlets():
-    return render_template('power-outlets.html')
-
-@app.route('/indoor-lighting.html')
-def indoor_lighting():
-    return render_template('indoor-lighting.html')
-
-@app.route('/security-system.html')
-def security_system():
-    return render_template('security-system.html')
-
-@app.route('/electrical-panels.html')
-def electrical_panels():
-    return render_template('electrical-panels.html')
-
-@app.route('/team.html')
-def team():
-    return render_template('team.html')
-
-@app.route('/team-2.html')
-def team2():
-    return render_template('team-2.html')
-
-@app.route('/team-details.html')
-def team_details():
-    return render_template('team-details.html')
-
-@app.route('/project.html')
-def project():
-    return render_template('project.html')
-
 @app.route('/contact.html')
 def iletisim():
     return render_template('contact.html')
-
-@app.route('/izleme.html')
-def izleme():
-    return render_template('izleme.html')
 
 @app.route('/dashboard_urun.html')
 @login_required
@@ -749,11 +705,6 @@ def dashboard_urun():
 @login_required
 def dashboard_profil():
     return render_template('dashboard_profil.html', user=current_user)
-
-@app.route('/dashboard_gizlilik.html')
-@login_required
-def dashboard_gizlilik():
-    return render_template('dashboard_gizlilik.html', user=current_user)
 
 @app.route('/add-product', methods=['POST'])
 @login_required
